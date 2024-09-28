@@ -1,0 +1,106 @@
+*{
+    font-family: 'Kumbh Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    background: whitesmoke;
+}
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 2px solid #eee;
+    padding: 30px;
+}
+
+
+/****************************************************************/
+/*******************         NAV    ****************************/
+/****************************************************************/
+.logo{
+    margin: 65px 0;
+    flex: 1;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+nav{
+    padding: 70px 0 ;
+    text-align: left !important;
+    flex: 2;
+}
+
+nav a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.cartEimg{
+    flex: 0.5;
+    display: flex;
+    align-items: center !important;
+}
+
+.cart-icon{
+    margin: 35px;
+    width: 27px;
+}
+.img-avatar{
+    width: 65px;
+}
+
+/****************************************************************/
+/*******************        Contenu   ****************************/
+/****************************************************************/
+
+.contenu{
+    display: flex ;
+    flex-direction: row;
+}
+
+/* Style pour l'image principale */
+.product-display {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  
+  .product-display img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  /* Style pour les miniatures */
+  .product-thumbnails {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .product-thumbnails img {
+    width: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+  }
+  
+  .product-thumbnails img:hover {
+    border: 2px solid hsl(26, 100%, 55%);
+  }
+    
+  .product-images{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .product-description{
+    flex: 1;
+  }

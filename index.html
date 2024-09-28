@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Kumbh+Sans">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+  
+</head>
+<body>
+
+  <header>
+    <img src="./images/logo.svg" alt="Sneaker Company Logo" class="logo">
+
+    <nav>
+      <a href="">Collections</a>
+      <a href="">Men</a>
+      <a href="">Women</a>
+      <a href="">About</a>
+      <a href="">Contact</a>
+    </nav>
+
+    <div class="cartEimg">
+      <img src="./images/icon-cart.svg" alt="Cart Icon" class="cart-icon">
+      <img src="./images/image-avatar.png" alt="Image Avatar" class="img-avatar">
+    </div>
+  </header>
+
+  <div class="contenu">
+
+    <div class="product-images">
+      <!-- Image principale -->
+      <div class="product-display">
+        <img id="main-image" src="./images/image-product-1.jpg" alt="Main Product Image">
+      </div>
+
+      <!-- Miniatures -->
+      <div class="product-thumbnails">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="Thumbnail 1" class="thumbnail" data-full="./images/image-product-1.jpg">
+        <img src="./images/image-product-2-thumbnail.jpg" alt="Thumbnail 2" class="thumbnail" data-full="./images/image-product-2.jpg">
+        <img src="./images/image-product-3-thumbnail.jpg" alt="Thumbnail 3" class="thumbnail" data-full="./images/image-product-3.jpg">
+        <img src="./images/image-product-4-thumbnail.jpg" alt="Thumbnail 4" class="thumbnail" data-full="./images/image-product-4.jpg">
+      </div>
+    </div>
+    <!-- Description du produit (inchangé) -->
+    <div class="product-description">
+      <h3>Sneaker Company</h3>
+
+      <h1>Fall Limited Edition Sneakers</h1>
+
+      <p>
+        These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+
+      <div>
+        $125.00
+        50%
+      </div>
+
+      <p>$250.00</p>
+
+      <button>0</button>
+      <button>Add to cart</button>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  
+  <script src="./script.js"></script>
+</body>
+</html>
