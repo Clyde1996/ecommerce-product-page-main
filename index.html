@@ -25,7 +25,12 @@
     </nav>
 
     <div class="cartEimg">
-      <img src="./images/icon-cart.svg" alt="Cart Icon" class="cart-icon">
+      <img src="./images/icon-cart.svg" alt="Icone du panier" class="cart-icon">
+      <div class="cart-details" style="display: none;">
+        <h3>Your Cart</h3>
+        <div class="cart-items"></div>
+        <p>Total: $<span class="cart-total">0.00</span></p>
+      </div>
       <img src="./images/image-avatar.png" alt="Image Avatar" class="img-avatar">
     </div>
   </header>
@@ -46,26 +51,43 @@
         <img src="./images/image-product-4-thumbnail.jpg" alt="Thumbnail 4" class="thumbnail" data-full="./images/image-product-4.jpg">
       </div>
     </div>
-    <!-- Description du produit (inchangé) -->
+
     <div class="product-description">
       <h3>Sneaker Company</h3>
 
-      <h1>Fall Limited Edition Sneakers</h1>
+      <h1>
+        Fall Limited Edition 
+        <span class="h1-newline">Sneakers</span>
+      </h1>
 
-      <p>
-        These low-profile sneakers are your perfect casual wear companion. Featuring a 
-        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      <p class="shoes-description">
+        These low-profile sneakers are your perfect casual wear <br>
+        companion. Featuring a durable rubber outer sole, they’ll 
+        <br> withstand everything the weather can offer.
       </p>
 
-      <div>
-        $125.00
-        50%
+      <div class="product-prices">
+        <p class="product-price">$125.00</p>
+        <p class="product-discount">50%</p>
       </div>
 
-      <p>$250.00</p>
+      <p class="product-old-price">$250.00</p>
 
-      <button>0</button>
-      <button>Add to cart</button>
+      <div class="addToCart-e-increaseQuantity">
+        <div class="increase-quantity">
+          <button class="decrease" onclick="updateQuantity(-1)">
+              <img src="/ecommerce-product-page-main/images/icon-minus.svg" alt="icon-minus" class="icon-minus">
+          </button>
+          <span class="quantity" id="quantity-Sneakers">0</span>
+          <button class="increase" onclick="updateQuantity(1)">
+              <img src="./images/icon-plus.svg" alt="icon-plus" class="icon-plus">
+          </button>
+        </div>
+        <button class="add-to-cart" onclick="addToCart()">
+          <img src="./images/icon-cart.svg" alt="Icone du panier pour ajouter des articles">
+          Add to cart
+        </button>
+      </div>
     </div>
   </div>
   

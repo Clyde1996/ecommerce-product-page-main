@@ -4,7 +4,11 @@
     margin: 0;
     box-sizing: border-box;
     outline: none;
-    background: whitesmoke;
+    background-color: #FFFFFF;
+}
+
+p{
+    font-size: 16px;
 }
 
 
@@ -13,7 +17,18 @@ header{
     flex-direction: row;
     justify-content: space-around;
     border-bottom: 2px solid #eee;
-    padding: 30px;
+    /* padding: 15px; */
+    align-items: center;
+    margin: 0 10%;
+    padding: 30px 0;
+}
+
+body{
+    /* margin: 5%; */
+}
+
+button, input {
+    outline: none;
 }
 
 
@@ -21,17 +36,19 @@ header{
 /*******************         NAV    ****************************/
 /****************************************************************/
 .logo{
-    margin: 65px 0;
-    flex: 1;
-    width: 30px;
-    height: 30px;
+    /* margin: 65px 0; */
+    /* flex: 1; */
+    flex: 0.5;
+    width: 25px;
+    height: 25px;
     object-fit: contain;
+    
 }
 
 nav{
-    padding: 70px 0 ;
+    padding: 0 70px;
     text-align: left !important;
-    flex: 2;
+    flex: 2; 
 }
 
 nav a{
@@ -39,10 +56,11 @@ nav a{
     text-decoration: none;
     color: black;
     font-size: 16px;
+    display: inline-block;
 }
 
 .cartEimg{
-    flex: 0.5;
+    /* flex: 0.5; */
     display: flex;
     align-items: center !important;
 }
@@ -52,7 +70,7 @@ nav a{
     width: 27px;
 }
 .img-avatar{
-    width: 65px;
+    width: 60px;
 }
 
 /****************************************************************/
@@ -62,6 +80,8 @@ nav a{
 .contenu{
     display: flex ;
     flex-direction: row;
+    gap: 120px;
+    padding: 5% 0;
 }
 
 /* Style pour l'image principale */
@@ -69,38 +89,238 @@ nav a{
     width: 100%;
     max-width: 500px;
     margin-bottom: 20px;
-  }
-  
-  .product-display img {
+}
+
+.product-display img {
     width: 100%;
     border-radius: 10px;
     cursor: pointer;
-  }
-  
-  /* Style pour les miniatures */
-  .product-thumbnails {
+}
+
+/* Style pour les miniatures */
+.product-thumbnails {
     display: flex;
-    gap: 15px;
-  }
-  
-  .product-thumbnails img {
-    width: 80px;
+    gap: 34px;
+}
+
+.product-thumbnails img {
+    width: 100px;
     border-radius: 10px;
     cursor: pointer;
     border: 2px solid transparent;
-    transition: border 0.3s ease;
-  }
-  
-  .product-thumbnails img:hover {
+    transition: filter 0.3s ease, border 0.3s ease; /* Transition fluide */
+}
+
+/* Appliquer un filtre au survol */
+.product-thumbnails img:hover {
+    filter: brightness(0.7); /* Réduit la luminosité, créant un effet de fondu */
     border: 2px solid hsl(26, 100%, 55%);
-  }
+}
+
+
+
     
-  .product-images{
+.product-images{
     display: flex;
     flex-direction: column;
     flex: 1;
-  }
+    align-items: flex-end;
+    margin: 20px;
+}
 
-  .product-description{
+
+  /*/////////////////////////////////////////////////////////////*/
+  /*//////////////// Product Description ////////////////////*/
+  /*/////////////////////////////////////////////////////////////*/
+
+.product-description{
     flex: 1;
-  }
+    /* padding: 10% 10% 5% 5%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.product-description h3{
+    padding: 50px 0 0 0;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.811) !important;
+}
+
+.product-description h1{
+    padding: 20px 0 30px 0;
+}
+
+.h1-newline {
+    display: block; /* Crée un saut de ligne en CSS */
+}
+
+.shoes-description{
+    line-height: 1.6;
+    color : rgba(0, 0, 0, 0.811) !important;
+}
+
+.product-description span p{
+    /* background-color: #FFFFFF; */
+}
+
+.shoes-description{
+    display: inline-block;
+}
+
+.product-prices{
+    display: flex;
+    flex-direction: row;
+    padding: 15px 0;
+}
+
+.product-price{
+    font-weight: bold;
+    padding: 10px 10px 10px 0;
+    font-size: 28px;
+}
+
+.product-discount{
+    background: black;
+    color: white;
+    border-radius: 10px;
+    margin: 12px;
+    padding: 6px 10px;
+}
+
+.product-old-price{
+    text-decoration: line-through;
+}
+
+.addToCart-e-increaseQuantity{
+    flex-direction: row;
+    display: flex;
+    margin: 50px 0;
+    justify-content: space-between; /* Répartit l'espace entre les éléments */
+    align-items: center; 
+}
+
+.addToCart-e-increaseQuantity button {
+    cursor: pointer;
+
+}
+
+
+
+
+/**************************************************/
+/************           Button         ************/
+/**************************************************/
+
+.add-to-cart{
+    background: #FF7D1B;
+    color: black;
+    font-weight: bold !important;
+    border: none;
+    /* Définit la taille directement */
+    width: 15.5rem;
+    height: 3.5rem;
+    
+    padding: 5px 10px; /* Ajuste les marges internes du bouton (haut/bas et gauche/droite) */
+    
+    border-radius: 10px; /* Pour garder l'effet arrondi */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    
+    font-size: 16px; /* Réduit la taille du texte */
+    text-align: center;
+    
+    /* Empêche le flex de le redimensionner */
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.add-to-cart:hover{
+    background-color: #fc9d54;;
+}
+
+.add-to-cart img{
+    background: none;
+    color: black !important;
+}
+
+.increase-quantity{
+    background: #F7F8FD;
+    margin: 0 15px 0 0;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1; /* Permet à l'élément de s'étendre */
+    justify-content: space-around;
+    align-items: center;
+    /* text-align: center; */
+    height: 3.5rem;
+    width: 9rem;
+    border-radius: 10px;
+}
+
+.increase-quantity span{
+    background: #F7F8FD;
+    padding: 0 15px; 
+}
+
+.increase-quantity button{
+    border: none !important;
+    background: none;
+    cursor: pointer;
+}
+
+.quantity{
+    font-weight: bold;
+}
+
+.icon-minus{
+    margin: 2px 0;
+}
+
+
+
+
+/* Style de la boîte du panier */
+.cart-details {
+    position: absolute;
+    top: 40px; /* Positionné sous l'icône du panier */
+    right: 0;
+    width: 300px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.cart-details h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.cart-details p{
+    /* background-color: #FFFFFF; */
+}
+
+  /* Si le panier est vide */
+.cart-items::before {
+    content: "Your cart is empty.";
+    font-size: 14px;
+    color: #888;
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cart-items p {
+font-size: 14px;
+margin: 5px 0;
+}
+  
