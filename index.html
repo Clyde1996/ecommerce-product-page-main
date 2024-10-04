@@ -38,6 +38,7 @@
   <div class="contenu">
 
     <div class="product-images">
+      
       <!-- Image principale -->
       <div class="product-display">
         <img id="main-image" src="./images/image-product-1.jpg" alt="Main Product Image">
@@ -49,10 +50,12 @@
         <img src="./images/image-product-2-thumbnail.jpg" alt="Thumbnail 2" class="thumbnail" data-full="./images/image-product-2.jpg">
         <img src="./images/image-product-3-thumbnail.jpg" alt="Thumbnail 3" class="thumbnail" data-full="./images/image-product-3.jpg">
         <img src="./images/image-product-4-thumbnail.jpg" alt="Thumbnail 4" class="thumbnail" data-full="./images/image-product-4.jpg">
+      
       </div>
     </div>
 
     <div class="product-description">
+      
       <h3>Sneaker Company</h3>
 
       <h1>
@@ -88,7 +91,25 @@
           Add to cart
         </button>
       </div>
+
     </div>
+  </div>
+
+  <div id="image-modal" class="modal" style="display: none;">
+    
+    <span class="close">
+      <img src="./images/icon-close.svg" alt="Icone Pour Fermer Les Images Ouvrir en Grand">
+    </span>
+    
+
+    <!-- Flèches pour changer les images -->
+    <a class="prev" onclick="changeModalImage(-1)">
+      <img src="./images/icon-previous.svg" alt="Icon Previous Image">
+    </a>
+    <a class="next" onclick="changeModalImage(1)">
+      <img src="./images/icon-next.svg" alt="Icon Next Image">
+    </a>
+    <img class="modal-content" id="modal-image">
   </div>
   
   <div class="attribution">

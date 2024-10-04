@@ -320,7 +320,88 @@ nav a{
 }
 
 .cart-items p {
-font-size: 14px;
-margin: 5px 0;
+    font-size: 14px;
+    margin: 5px 0;
 }
+
+/*********************************************/
+
+
+/* Style du modal */
+.modal {
+    display: none; /* Masqué par défaut */
+    position: fixed; /* Reste au même endroit (fixe) */
+    z-index: 1; /* Au-dessus du contenu normal */
+    padding-top: 60px; /* Espacement en haut */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largeur totale */
+    height: 100%; /* Hauteur totale */
+    overflow: auto; /* Permet de faire défiler si nécessaire */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Noir avec transparence */
+}
+  
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Limite la taille de l'image */
+    max-height: 90%;
+}
+  
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none ;
+}
+  
+.close:hover,
+.close:focus {
+    color: hsl(26, 100%, 55%);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/********************************/
+
+/* Modal flèches de navigation */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Image du modal pour qu'elle s'adapte à la taille */
+  .modal-content {
+    display: block;
+    max-width: 80%;
+    margin: auto;
+    width: auto;
+    height: auto;
+  }
+  
+  
   
