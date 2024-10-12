@@ -26,6 +26,7 @@
 
     <div class="cartEimg">
       <img src="./images/icon-cart.svg" alt="Icone du panier" class="cart-icon">
+      <span class="cart-count">0</span> <!-- Nombre d'articles dans le panier --> 
       <div class="cart-details" style="display: none;">
         <h3>Your Cart</h3>
         <div class="cart-items"></div>
@@ -96,12 +97,8 @@
   </div>
 
   <div id="image-modal" class="modal" style="display: none;">
-    
-    <span class="close">
-      <img src="./images/icon-close.svg" alt="Icone Pour Fermer Les Images Ouvrir en Grand">
-    </span>
-    
-
+    <span class="close">&times;</span>
+  
     <!-- Flèches pour changer les images -->
     <a class="prev" onclick="changeModalImage(-1)">
       <img src="./images/icon-previous.svg" alt="Icon Previous Image">
@@ -109,14 +106,25 @@
     <a class="next" onclick="changeModalImage(1)">
       <img src="./images/icon-next.svg" alt="Icon Next Image">
     </a>
+  
+    <!-- Image principale du modal -->
     <img class="modal-content" id="modal-image">
+  
+    <!-- Miniatures en bas du modal -->
+    <div class="modal-thumbnails">
+      <img src="./images/image-product-1-thumbnail.jpg" class="modal-thumbnail" data-full="./images/image-product-1.jpg" alt="Thumbnail 1">
+      <img src="./images/image-product-2-thumbnail.jpg" class="modal-thumbnail" data-full="./images/image-product-2.jpg" alt="Thumbnail 2">
+      <img src="./images/image-product-3-thumbnail.jpg" class="modal-thumbnail" data-full="./images/image-product-3.jpg" alt="Thumbnail 3">
+      <img src="./images/image-product-4-thumbnail.jpg" class="modal-thumbnail" data-full="./images/image-product-4.jpg" alt="Thumbnail 4">
+    </div>
   </div>
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
   
-  <script src="./script.js"></script>
+  <script type="module" src="./js/app.js"></script>
 </body>
 </html>

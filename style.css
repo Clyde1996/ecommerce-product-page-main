@@ -63,12 +63,32 @@ nav a{
     /* flex: 0.5; */
     display: flex;
     align-items: center !important;
+    position: relative;
 }
 
 .cart-icon{
     margin: 35px;
     width: 27px;
+    cursor: pointer;
 }
+
+.cart-count {
+    position: absolute;
+    top: 27%; /* Ajuste la position verticale */
+    right: 61%; /* Ajuste la position horizontale */
+    background-color: red; /* Couleur du badge */
+    color: white; /* Couleur du texte */
+    border-radius: 50%; /* Pour un effet circulaire */
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    visibility: hidden; /* Cache le badge par défaut */
+}
+
 .img-avatar{
     width: 60px;
 }
@@ -97,7 +117,11 @@ nav a{
     cursor: pointer;
 }
 
+/*****************************************/
+
 /* Style pour les miniatures */
+
+/*****************************************/
 .product-thumbnails {
     display: flex;
     gap: 34px;
@@ -108,14 +132,16 @@ nav a{
     border-radius: 10px;
     cursor: pointer;
     border: 2px solid transparent;
-    transition: filter 0.3s ease, border 0.3s ease; /* Transition fluide */
+    transition:  border 0.3s ease; /* Transition fluide */
 }
 
 /* Appliquer un filtre au survol */
 .product-thumbnails img:hover {
-    filter: brightness(0.7); /* Réduit la luminosité, créant un effet de fondu */
     border: 2px solid hsl(26, 100%, 55%);
 }
+
+
+
 
 
 
@@ -297,6 +323,9 @@ nav a{
     border-radius: 10px;
     padding: 20px;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .cart-details h3 {
@@ -339,20 +368,23 @@ nav a{
     height: 100%; /* Hauteur totale */
     overflow: auto; /* Permet de faire défiler si nécessaire */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Noir avec transparence */
+    background-color: rgba(0,0,0,0.7); /* Noir avec transparence */
 }
   
 .modal-content {
     margin: auto;
     display: block;
     max-width: 90%; /* Limite la taille de l'image */
-    max-height: 90%;
+    width: auto;
+    max-height: 80vh;
+    height: auto;
+    border-radius: 10px;
 }
   
 .close {
     position: absolute;
-    top: 20px;
-    right: 35px;
+    top: 15px;
+    right: 31.3%;
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
@@ -374,34 +406,78 @@ nav a{
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
+    width: 60px; /* Taille fixe pour la largeur et la hauteur */
+    height: 60px;
     color: white;
-    font-weight: bold;
-    font-size: 24px;
+    border-radius: 50%; /* Pour rendre la flèche ronde */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: 0.3s;
-    border-radius: 0 3px 3px 0;
     user-select: none;
+    transform: translateY(-50%); /* Centrer verticalement */
+}
+  
+.next {
+    right: 29%;
+}
+
+.prev{
+    left: 29%;
+}
+  
+.prev:hover, .next:hover {
+    color: hsl(26, 100%, 55%);
+}
+  
+.prev img, .next img {
+    width: 16px; /* Taille de l'icône */
+    height: 16px;
+}
+
+.prev img:hover{
+    content: url('./images/previous-hover.svg'); /* Remplacer par l'image au survol */
+}
+
+.next img:hover{
+    content: url('./images/next-hover.svg'); /* Remplacer par l'image au survol */
+}
+
+
+/*************************************************************/
+/*****************Modal Thumbnails*****************************/
+/*************************************************************/
+  
+
+.modal-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+    margin: 15px;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,-0.3); /* Noir avec transparence */
   }
   
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+  .modal-thumbnail {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
   }
   
-  .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  .modal-thumbnail.selected {
+    border: 2px solid hsl(26, 100%, 55%);
   }
+
   
-  /* Image du modal pour qu'elle s'adapte à la taille */
-  .modal-content {
-    display: block;
-    max-width: 80%;
-    margin: auto;
-    width: auto;
-    height: auto;
-  }
+  
+.cart-item-img{
+    width: 50px; height: 50px; object-fit: cover; margin-right: 10px;
+}
+
+
   
   
   
